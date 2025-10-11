@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Works デザイン・ギャラリー</title>
+  <link rel="icon" sizes="500x500" href="images/favicon.ico" id="favicon">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon-180x180.png">
+  <meta name="description" content="ポートフォリオのWebサイトです。">
+  <meta name="keywords" content="ポートフォリオ,PORTFOLIO,Portfolio,portfolio">
+  <link rel="stylesheet" href="style.css" />
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=Cinzel:wght@400..900&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Hachi+Maru+Pop&family=Italiana&family=M+PLUS+Rounded+1c&family=Noto+Serif+JP:wght@200..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+  <body>
+
+  <header class="navbar">
+    <div class="nav-container">
+      <div class="logo">
+        <a href="index.html">PHYO's Portfolio</a>
+      </div>
+
+      <!-- ハンバーガー -->
+      <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+        <span class="line line1"></span>
+        <span class="line line2"></span>
+        <span class="line line3"></span>
+      </div>
+
+      <!-- メニュー本体 -->
+      <nav class="nav-menu" id="navMenu">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About me</a></li>
+            <li><a href="#">My Works</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+    </div>
+  </header>
+
+  <section class="myworks">
+    <h2>My Works<span>デザイン・ギャラリー</h2>
+      <div class="filter-buttons">
+        <a href="#"><button class="filter-btn active" data-filter="All">すべて</button></a>
+        <a href="webdesign.html"><button class="filter-btn" data-filter="Website">Webサイト</button></a>
+        <a href="banner.html"><button class="filter-btn" data-filter="Banner">バナー</button></a>
+        <a href="logo.html"><button class="filter-btn" data-filter="Logo">ロゴ</button></a>
+        <a href="other.html"><button class="filter-btn" data-filter="Others">その他</button></a>
+    </div>
+  </section>
+
+<!-- Projects Section -->
+<section id="projects" class="projects fade-in">
+  <div class="design-grid">
+    <div class="design-card">
+      <a href="webdesign-maisonbellesfleurs.html"><img src="images/m-belles.jpg" alt="メゾンベル・フルール　Webデザイン" />
+      <h3>メゾン ベル・フルール</h3></a>
+      <p>direction / web design / coding</p>
+    </div>
+    <div class="design-card">
+      <a href="webdesign-s-kadai1.html"><img src="images/s-kadai1.jpg" alt="スクール課題2　Webデザイン" />
+      <h3>本多屋・和食処</h3></a>
+      <p>web design / coding</p>
+    </div>
+  </div>
+
+  <div class="design-grid fade-in">
+    <div class="design-card">
+      <a href="webdesign-s-kadai2.html"><img src="images/s-kadai2.jpg" alt="スクール課題2　Webデザイン" />
+      <h3>ル・カフェ・デ・シャ</h3></a>
+      <p>web design / coding</p>
+    </div>
+    <div class="design-card">
+      <a href="webdesign-tp-portfolio.html"><img src="images/tp-portfolio.jpg" alt="ポートフォリオ　Webデザイン" />
+      <h3>PHYO's Portfolio（ポートフォリオ）</h3></a>
+      <p>direction / web design / coding</p>
+    </div>
+  </div>
+
+  <div class="design-grid fade-in">
+    <div class="design-card">
+      <a href="banner-goalseeker-education.html"><img src="images/gs-banner.jpg" alt="GoalSeekerEducation　バナーデザイン" />
+      <h3>Goal Seekers Education SNS広告バナー</h3></a>
+      <p>banner design</p>
+    </div>
+    <div class="design-card">
+      <a href="banner-season-flower.html"><img src="images/sflower-banner.jpg" alt="SeasonFlowersGift　バナーデザイン" />
+      <h3>季節のお花ギフト SNS広告バナー</h3></a>
+      <p>banner design</p>
+    </div>
+  </div>
+
+  <!-- <div class="design-grid fade-in">
+    <div class="design-card">
+      <a href="visual1.html"><img src="images/banner.jpg" alt="GoalSeekersEdu" />
+      <h3>Goal Seekers Education LP</h3></a>
+      <p>direction / web design / coding</p>
+    </div>
+    <div class="design-card">
+      <a href="visual1.html"><img src="images/banner.jpg" alt="GoalSeekersEdu" />
+      <h3>ウェディング・アイテム 宣伝バナー</h3></a>
+      <p>banner design</p>
+    </div>
+  </div> -->
+
+  <div class="design-grid fade-in">
+    <div class="design-card">
+      <a href="logo-jayit.html"><img src="images/jy-logo.jpg" alt="JAYIT　ロゴデザイン" />
+      <h3>JAYIT - Japan Information Tips for You</h3></a>
+      <p>logo design</p>
+    </div>
+    <div class="design-card">
+      <a href="logo-elegreens.html"><img src="images/eg-logo.jpg" alt="eleGreens ロゴデザイン" />
+      <h3>eleGREENS – Enjoy Gardening</h3></a>
+      <p>logo design</p>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<a name = "contact"></a>
+<section id="contact" class="contact fade-in">
+  <h2>Contact<span>お問い合わせ</span></h2>
+  <p>
+    ご覧いただきありがとうございます。こちらからお気軽にご連絡ください。
+  </p>
+    <form action="https://formspree.io/f/meokbpnj" method="POST">
+    <input type="text" name="name" placeholder="お名前" required style="margin-top: 20px;">
+    <input type="email" name="email" placeholder="メールアドレス" required style="margin-top: 20px;">
+    <textarea name="message" placeholder="メッセージ" rows="5" style="margin-top: 20px;"></textarea>
+    <button type="submit">送信する</button>
+    </form>
+</section>
+
+<!-- Sidebar Social Icons -->
+<div class="social-sidebar">
+  <ul>
+<li>
+  <a href="https://facebook.com/yourusername" target="_blank" aria-label="Facebook">
+    <i class="fab fa-facebook-f"></i>
+  </a>
+</li>
+<li>
+  <a href="https://instagram.com/yourusername" target="_blank" aria-label="Instagram">
+    <i class="fab fa-instagram"></i>
+  </a>
+</li>
+<li>
+  <a href="https://twitter.com/yourusername" target="_blank" aria-label="Twitter">
+    <i class="fab fa-x-twitter"></i>
+  </a>
+</li>
+</ul>
+</div>
+
+<footer>
+  <div class="footer-container">
+    <div class="footer-social">
+    <!-- メールアイコン -->
+    <a href="mailto:yukikoibito@gmail.com" class="footer-mail">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+        <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2zm13 2.383l-5.803 3.482L15 12.383V5.383zm-1.175 6.097L8 9.383l-5.825 2.097A1 1 0 0 0 2 13h12a1 1 0 0 0 .825-.52zM1 12.383l5.803-3.518L1 5.383v6.999z"/>
+      </svg>yukikoibito@gmail.com</a>
+
+    <!-- 履歴書・職務経歴書pdfボタン -->
+    <div id="resume" style="display: none;">
+      <button id="resumeBtn">レジュメ（表示）</button>
+      <div id="pdfContainer1" style="margin-top: 20px;">
+        <iframe
+          src="https://designstudiobys.wordpress.com/wp-content/uploads/2025/07/240422e5b1a5e6adb4e69bb8_e38386e382a3e383b3e382b6e383bce38394e383a7e383bc.pdf" download
+          width="100%"
+          height="600px"
+          style="border: 1px solid #64ffda; border-radius: 6px;"
+        ></iframe>
+      </div>
+
+      <button id="careerBtn">職務経歴書（表示）</button>
+      <div id="pdfContainer2" style="margin-top: 20px;">
+        <iframe
+          src="https://designstudiobys.wordpress.com/wp-content/uploads/2025/07/240422e5b1a5e6adb4e69bb8_e38386e382a3e383b3e382b6e383bce38394e383a7e383bc.pdf" download
+          width="100%"
+          height="600px"
+          style="border: 1px solid #64ffda; border-radius: 6px;"
+        ></iframe>
+      </div>
+    </div>
+  </div>
+
+ <!-- メニューバー -->
+  <nav class="footer-nav">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About me</a></li>
+      <li><a href="#">My Works</a></li>
+    </ul>
+  </nav>
+  </div>
+  <!-- サイト名 -->
+  <p>© 2025 PHYO's Portfolio.All rights reserved.</p>
+  <!-- トップに戻るボタン -->
+  <div class="arrow-up" aria-label="トップへ戻る"><a href="#" alt="トップへ戻る">
+    ↑</a>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
