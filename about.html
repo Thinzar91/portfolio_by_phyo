@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio | ポートフォリオ</title>
+  <link rel="icon" sizes="500x500" href="images/favicon.ico" id="favicon">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon-180x180.png">
+  <meta name="description" content="ポートフォリオのWebサイトです。">
+  <meta name="keywords" content="ポートフォリオ,PORTFOLIO,Portfolio,portfolio">
+  <link rel="stylesheet" href="style.css" />
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=Cinzel:wght@400..900&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Hachi+Maru+Pop&family=Italiana&family=M+PLUS+Rounded+1c&family=Noto+Serif+JP:wght@200..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+<body>
+
+  <header class="navbar">
+    <div class="nav-container">
+      <div class="logo">
+        <a href="index.html">PHYO's Portfolio</a>
+      </div>
+
+      <!-- ハンバーガー -->
+      <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+        <span class="line line1"></span>
+        <span class="line line2"></span>
+        <span class="line line3"></span>
+      </div>
+
+      <!-- メニュー本体 -->
+      <nav class="nav-menu" id="navMenu">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">About me</a></li>
+            <li><a href="myworks.html">My Works</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+    </div>
+  </header>
+
+  <section id="about" class="hero fade-in">
+    <div class="container hero-content">
+      <div class="hero-image">
+        <img src="images/profile.jpg" alt="ThinZarの写真">
+      </div>
+      <div class="hero-text">
+        <h2>About me<span>私のこと</span></h2>
+        <h3><span class="highlight">Thinzar Phyo（ティンザー・ピョー）</span></h3>
+        <p class="lead">ミャンマー出身、日本在住のWebデザイナーです。<br>外国人支援業務やIT企業での経験を活かし、
+          ユーザーに伝わる・使いやすいデザインを心がけています。これまでに企業バナー、LPデザイン、レスポンシブ
+          サイト制作など多様な案件に関わってきました。グローバルな視点と繊細な感性を活かし、「伝えるデザイン」をご提案します。</p>
+        <a href="about.html" class="btn">詳しくみる<span class="arrow">→</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!--Experience section -->
+  <section id="experience" class="experience fade-in">
+    <h2>My Experience<span>経歴</span></h2>
+      <div class="timeline">
+        <ul>
+          <li>
+            <div class="content">
+              <h3>株式会社ベル・フルール<br>EC/デザイン部にてWebデザイナー兼コーダーとして活躍</h3>
+                   <!-- <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                     Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                     when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p> -->
+            </div>
+            <div class="time">
+              <h4>2020.1~2023.6</h4>
+            </div>
+         </li>
+
+         <li>
+           <div class="content">
+            <h3>Winスクールへ通学<br>"Webマスターコース"を習得</h3>
+              <!-- <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+              Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+              when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p> -->
+            </div>
+            <div class="time">
+              <h4>2022.1~2022.11</h4>
+            </div>
+          </li>
+
+            <div style="clear:both;"></div>
+        </ul>
+      </div>
+  </section>
+
+
+  <section id="skills" class="skills fade-in">
+    <h2>Skills<span>スキル</span></h2>
+      <div class="sf-skillbars">
+
+        <div class="sf-skill">
+          <span class="skill-icon"><img src="https://snippflow.com/wp-content/articles/snippets/animated-skill-bars/css.svg" alt="css-icon" /></span>
+            <div class="skill-content" data-percent="70">
+              <h4 class="skill-title">HTML5/CSS3</h4>
+                <p>
+                  <strong>学習方法：</strong>スクール授業にて基礎を学び、個人で模写や実案件を通じて習得しました。<br>
+                  <strong>活用例：</strong>Webページの制作・更新業務で頻繁に使用しており、HTMLで構造を組み、CSSでデザインを調整しています。<br>
+                  <strong>特徴：</strong>レスポンシブ対応やFlexbox/Gridを用いたレイアウト構築が可能です。綺麗で保守性の高いコードを意識しています。
+                </p>
+              <div class="skill-bar" style="--bar-width: 90%" data-progress="90%"><span></span></div>
+           </div>
+        </div>
+
+        <div class="sf-skill">
+                <span class="skill-icon"><img src="https://snippflow.com/wp-content/articles/snippets/animated-skill-bars/js.svg" alt="js-icon" /></span>
+                <div class="skill-content">
+                  <h4 class="skill-title">JavaScript/jQuery</h4>
+                  <p>
+                    <strong>学習方法：</strong>スクールで基礎に触れ、実装例を参考にしながら個人制作でjQueryも併用して学習中です。<br>
+                    <strong>活用例：</strong>Webサイト制作時に、コピーペーストを活用しながらスライドや簡単なスクロールアニメーションを取り入れています。<br>
+                    <strong>特徴：</strong>まだDOM操作やイベント処理などの基礎理解は浅いですが、今後の学習で習得を目指しています。
+                  </p>
+                  <div class="skill-bar" style="--bar-width: 53%" data-progress="53%"><span></span></div>
+                </div>
+              </div>
+
+      <div class="sf-skill">
+        <span class="skill-icon"><img src="./images/figma-logo.svg" alt="figma-icon" /></span>
+          <div class="skill-content">
+            <h4 class="skill-title">Figma</h4>
+              <p>
+                <strong>学習方法：</strong>Udemyの講座やYouTubeチュートリアルを通して学習し、WebサイトやバナーのUI設計を行っています。<br>
+                <strong>活用例：</strong>ワイヤーフレームやデザインカンプの作成に取り組んでいます。<br>
+                <strong>特徴：</strong>オートレイアウトやコンポーネント機能、共有リンクによるレビュー機能など、効率的なUIデザイン制作に役立つツールです。
+              </p>
+                <div class="skill-bar" style="--bar-width: 60%" data-progress="60%"><span></span></div>
+          </div>
+      </div>
+
+              <div class="sf-skill">
+                <span class="skill-icon"><img src="./images/logo_ai.svg" alt="ai-icon" /></span>
+                <div class="skill-content">
+                  <h4 class="skill-title">Adobe Illustrator</h4>
+                  <p>
+                    <strong>学習方法：</strong>スクール授業にて基礎を学び、独学とYouTubeチュートリアルを通じて、アイコンやロゴ、フラットイラストなどを制作しました。<br>
+                    <strong>活用例：</strong>通販サイト用の商品ビジュアル画像、バナー制作、ロゴ制作、SNS投稿用のイラストやアイコンの作成に使用しています。<br>
+                    <strong>特徴：</strong>ベクター形式で拡大縮小しても劣化しない高品質なデザインが可能です。
+                  </p>
+                  <div class="skill-bar" style="--bar-width: 85%" data-progress="85%"><span></span></div>
+                </div>
+              </div>
+
+              <div class="sf-skill">
+                <span class="skill-icon"><img src="./images/logo_ps.svg" alt="ps-icon" /></span>
+                <div class="skill-content">
+                  <h4 class="skill-title">Adobe Photoshop</h4>
+                  <p>
+                    <strong>学習方法：</strong>スクール授業にて基礎を学び、独学とYouTubeチュートリアルを通じて、写真編集や画像加工などを学習しました。<br>
+                    <strong>活用例：</strong>SNS投稿用の画像編集、Webサイト用のキービジュアルの加工・制作に使用しています。<br>
+                    <strong>特徴：</strong>レイヤー編集や色調補正、合成など細かな画像加工に強みがあります。
+                  </p>
+                  <div class="skill-bar" style="--bar-width: 68%" data-progress="68%"><span></span></div>
+                </div>
+              </div>
+
+              <div class="sf-skill">
+                <span class="skill-icon"><img src="https://s.w.org/style/images/about/WordPress-logotype-simplified.png" alt="wp-icon" /></span>
+                <div class="skill-content">
+                  <h4 class="skill-title">Wordpress</h4>
+                  <p>
+                    <strong>学習方法：</strong>独学と実務経験を通して、テーマの基本構造やプラグインの設定方法などを学びました。<br>
+                    <strong>活用例：</strong>Webサイトのニュース更新やPDFファイルのアップロードなど、メディア運用業務に携わりました。<br>
+                    <strong>特徴：</strong>コードの知識がなくても操作可能で、コンテンツの追加や管理が容易なため、情報発信の効率化に役立ちました。<br>
+                    <strong>今後の展望：</strong>これまでの運用経験を活かし、今後はWordPressを使ったWebサイトの制作にも挑戦していきたいと考えています。
+                  </p>
+                  <div class="skill-bar" style="--bar-width: 50%" data-progress="50%"><span></span></div>
+                </div>
+              </div>
+
+            </div>
+            </section>
+
+
+
+  <!-- Contact Section -->
+  <a name = "contact"></a>
+  <section id="contact" class="contact fade-in">
+    <h2>Contact<span>お問い合わせ</span></h2>
+    <p>
+      ご覧いただきありがとうございます。こちらからお気軽にご連絡ください。
+    </p>
+      <form action="https://formspree.io/f/meokbpnj" method="POST">
+      <input type="text" name="name" placeholder="お名前" required style="margin-top: 20px;">
+      <input type="email" name="email" placeholder="メールアドレス" required style="margin-top: 20px;">
+      <textarea name="message" placeholder="メッセージ" rows="5" style="margin-top: 20px;"></textarea>
+      <button type="submit">送信する</button>
+      </form>
+  </section>
+
+  <!-- Sidebar Social Icons -->
+  <div class="social-sidebar">
+    <ul>
+  <li>
+    <a href="https://facebook.com/yourusername" target="_blank" aria-label="Facebook">
+      <i class="fab fa-facebook-f"></i>
+    </a>
+  </li>
+  <li>
+    <a href="https://instagram.com/yourusername" target="_blank" aria-label="Instagram">
+      <i class="fab fa-instagram"></i>
+    </a>
+  </li>
+  <li>
+    <a href="https://twitter.com/yourusername" target="_blank" aria-label="Twitter">
+      <i class="fab fa-x-twitter"></i>
+    </a>
+  </li>
+</ul>
+  </div>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-social">
+      <!-- メールアイコン -->
+      <a href="mailto:yukikoibito@gmail.com" class="footer-mail">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+          <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2zm13 2.383l-5.803 3.482L15 12.383V5.383zm-1.175 6.097L8 9.383l-5.825 2.097A1 1 0 0 0 2 13h12a1 1 0 0 0 .825-.52zM1 12.383l5.803-3.518L1 5.383v6.999z"/>
+        </svg>yukikoibito@gmail.com</a>
+
+      <!-- 履歴書・職務経歴書pdfボタン -->
+      <div id="resume" style="display: none;">
+        <button id="resumeBtn">レジュメ（表示）</button>
+        <div id="pdfContainer1" style="margin-top: 20px;">
+          <iframe
+            src="https://designstudiobys.wordpress.com/wp-content/uploads/2025/07/240422e5b1a5e6adb4e69bb8_e38386e382a3e383b3e382b6e383bce38394e383a7e383bc.pdf" download
+            width="100%"
+            height="600px"
+            style="border: 1px solid #64ffda; border-radius: 6px;"
+          ></iframe>
+        </div>
+
+        <button id="careerBtn">職務経歴書（表示）</button>
+        <div id="pdfContainer2" style="margin-top: 20px;">
+          <iframe
+            src="https://designstudiobys.wordpress.com/wp-content/uploads/2025/07/240422e5b1a5e6adb4e69bb8_e38386e382a3e383b3e382b6e383bce38394e383a7e383bc.pdf" download
+            width="100%"
+            height="600px"
+            style="border: 1px solid #64ffda; border-radius: 6px;"
+          ></iframe>
+        </div>
+      </div>
+    </div>
+
+   <!-- メニューバー -->
+    <nav class="footer-nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#">About me</a></li>
+        <li><a href="myworks.html">My Works</a></li>
+      </ul>
+    </nav>
+    </div>
+    <!-- サイト名 -->
+    <p>© 2025 PHYO's Portfolio.All rights reserved.</p>
+    <!-- トップに戻るボタン -->
+    <div class="arrow-up" aria-label="トップへ戻る"><a href="#" alt="トップへ戻る">
+      ↑</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
