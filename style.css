@@ -25,7 +25,7 @@ a {
 }
 
 a:hover {
-  color: #05afc4;
+  color: #3e4e50;
 }
 
 section {
@@ -1507,7 +1507,7 @@ margin-bottom: 5px;
   .works-hero-img img {
     width: 100%;
     height: auto;
-    max-width: none;
+    max-width: 400px;
     border-radius: 0;
   }
 
