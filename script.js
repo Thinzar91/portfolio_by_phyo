@@ -93,7 +93,7 @@ $(window).load(function() {
         });
     });
 
-// Arkwork JS
+// My works Filter button JS
 const filterButtons = document.querySelectorAll('.filter-btn');
   const galleryItems = document.querySelectorAll('.gallery-item');
 
@@ -114,21 +114,20 @@ const filterButtons = document.querySelectorAll('.filter-btn');
     });
   });
 
-
-//js
-function openModal(img, modalId) {
-  const modal = document.getElementById(modalId);
-  const modalImg = modal.querySelector(".modal-content");
-  modalImg.src = img.src;
-  modal.style.display = "block";
-}
-
-function closeModal() {
-  const modals = document.querySelectorAll(".modal");
-  modals.forEach(modal => {
-    modal.style.display = "none";
-  });
-}
+//Modal js
+// function openModal(img, modalId) {
+//   const modal = document.getElementById(modalId);
+//   const modalImg = modal.querySelector(".modal-content");
+//   modalImg.src = img.src;
+//   modal.style.display = "block";
+// }
+//
+// function closeModal() {
+//   const modals = document.querySelectorAll(".modal");
+//   modals.forEach(modal => {
+//     modal.style.display = "none";
+//   });
+// }
 
 // MyWorks Filter buttons
   const buttons = document.querySelectorAll('.filter-btn');
