@@ -13,7 +13,7 @@ body {
   color: #3e4e50;
   line-height: 1.8;
   scroll-behavior: smooth;
-  padding-top: 80px;/* ナビバーでページが隠れないように調整 */
+  padding-top: 80px;
 }
 html, body {
   overflow-x: hidden;
@@ -1221,7 +1221,7 @@ img {
 /* 以上スキルバー */
 
 /* お問い合わせ */
- #contact {
+#contact {
   /* margin-top: 20px; */
   padding: 50px 20px;
   color: #3e4e50;
@@ -1327,16 +1327,16 @@ img {
 }
 
 @media (max-width: 768px) {
- .myworks h2 {
-   font-size: 1.8rem;
-   line-height: 1.6;
-   margin-top: 1.8rem;
- }
+  .myworks h2 {
+    font-size: 1.8rem;
+    line-height: 1.6;
+    margin-top: 1.8rem;
+  }
 
- .myworks p {
-   font-size: 0.8rem;
-   margin: -40px 20px 0;
- }
+  .myworks p {
+    font-size: 0.8rem;
+    margin: -40px 20px 0;
+  }
 }
 
 .filter-buttons {
@@ -1413,8 +1413,8 @@ img {
 }
 
 #myworks-design .design-description h3{
-color: #3e4e50;
-margin-bottom: 5px;
+  color: #3e4e50;
+  margin-bottom: 5px;
 }
 
 #myworks-design .design-description a:hover {
@@ -1979,7 +1979,7 @@ a.slide_btn {
 }
 
 /* タブレット対応*/
- @media only screen and (min-width: 768px) and (max-width: 1024px) {
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
   .slide_viewer {
     height: 80vh;
   }

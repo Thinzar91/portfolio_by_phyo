@@ -12,13 +12,13 @@ const scrollTrigger = () => {
 
 // navbar
 window.addEventListener('scroll', function () {
-    const navbar = document.querySelector('.navbar');
-    if (window.scrollY === 0) {
-      navbar.style.position = 'fixed';
-    } else {
-      navbar.style.position = 'static';
-    }
-  });
+  const navbar = document.querySelector('.navbar');
+  if (window.scrollY === 0) {
+    navbar.style.position = 'fixed';
+  } else {
+    navbar.style.position = 'static';
+  }
+});
 
 // レジュメボタンの処理
 const resumeBtn = document.getElementById("resumeBtn");
@@ -81,38 +81,38 @@ function toggleMenu() {
 }
 
 $(window).load(function() {
-        $('a[href^=#]').click(function() {
-            var speed = 1000;
-            var href = $(this).attr("href");
-            var target = $(href == "#" || href == "" ? 'html' : href);
-            var position = target.offset().top;
-            $("html, body").animate({
-                scrollTop: position
-            }, speed, "swing");
-            return false;
-        });
-    });
+  $('a[href^=#]').click(function() {
+    var speed = 1000;
+    var href = $(this).attr("href");
+    var target = $(href == "#" || href == "" ? 'html' : href);
+    var position = target.offset().top;
+    $("html, body").animate({
+      scrollTop: position
+    }, speed, "swing");
+    return false;
+  });
+});
 
 // My works Filter button JS
 const filterButtons = document.querySelectorAll('.filter-btn');
-  const galleryItems = document.querySelectorAll('.gallery-item');
+const galleryItems = document.querySelectorAll('.gallery-item');
 
-  filterButtons.forEach(button => {
-    button.addEventListener('click', () => {
-      document.querySelector('.filter-btn.active').classList.remove('active');
-      button.classList.add('active');
+filterButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    document.querySelector('.filter-btn.active').classList.remove('active');
+    button.classList.add('active');
 
-      const filterValue = button.getAttribute('data-filter');
+    const filterValue = button.getAttribute('data-filter');
 
-      galleryItems.forEach(item => {
-        if (filterValue === 'all' || item.classList.contains(filterValue)) {
-          item.classList.remove('hide');
-        } else {
-          item.classList.add('hide');
-        }
-      });
+    galleryItems.forEach(item => {
+      if (filterValue === 'all' || item.classList.contains(filterValue)) {
+        item.classList.remove('hide');
+      } else {
+        item.classList.add('hide');
+      }
     });
   });
+});
 
 //Modal js
 // function openModal(img, modalId) {
@@ -130,104 +130,104 @@ const filterButtons = document.querySelectorAll('.filter-btn');
 // }
 
 // MyWorks Filter buttons
-  const buttons = document.querySelectorAll('.filter-btn');
+const buttons = document.querySelectorAll('.filter-btn');
 
-  buttons.forEach(btn => {
-    btn.addEventListener('click', () => {
-      // 全てのボタンから active を外す
-      buttons.forEach(b => b.classList.remove('active'));
-      // クリックしたボタンに active を付与
-      btn.classList.add('active');
-    });
+buttons.forEach(btn => {
+  btn.addEventListener('click', () => {
+    // 全てのボタンから active を外す
+    buttons.forEach(b => b.classList.remove('active'));
+    // クリックしたボタンに active を付与
+    btn.classList.add('active');
   });
+});
 
 
-     $('.slider').each(function() {
-    var $this = $(this);
-    var $group = $this.find('.slide_group');
-    var $slides = $this.find('.slide');
-    var bulletArray = [];
-    var currentIndex = 0;
-    var timeout;
+$('.slider').each(function() {
+  var $this = $(this);
+  var $group = $this.find('.slide_group');
+  var $slides = $this.find('.slide');
+  var bulletArray = [];
+  var currentIndex = 0;
+  var timeout;
 
-    function move(newIndex) {
-      var animateLeft, slideLeft;
+  function move(newIndex) {
+    var animateLeft, slideLeft;
 
-      advance();
+    advance();
 
-      if ($group.is(':animated') || currentIndex === newIndex) {
-        return;
-      }
+    if ($group.is(':animated') || currentIndex === newIndex) {
+      return;
+    }
 
-      bulletArray[currentIndex].removeClass('active');
-      bulletArray[newIndex].addClass('active');
+    bulletArray[currentIndex].removeClass('active');
+    bulletArray[newIndex].addClass('active');
 
-      if (newIndex > currentIndex) {
-        slideLeft = '100%';
-        animateLeft = '-100%';
-      } else {
-        slideLeft = '-100%';
-        animateLeft = '100%';
-      }
+    if (newIndex > currentIndex) {
+      slideLeft = '100%';
+      animateLeft = '-100%';
+    } else {
+      slideLeft = '-100%';
+      animateLeft = '100%';
+    }
 
+    $slides.eq(newIndex).css({
+      display: 'block',
+      left: slideLeft
+    });
+    $group.animate({
+      left: animateLeft
+    }, function() {
+      $slides.eq(currentIndex).css({
+        display: 'none'
+      });
       $slides.eq(newIndex).css({
-        display: 'block',
-        left: slideLeft
+        left: 0
       });
-      $group.animate({
-        left: animateLeft
-      }, function() {
-        $slides.eq(currentIndex).css({
-          display: 'none'
-        });
-        $slides.eq(newIndex).css({
-          left: 0
-        });
-        $group.css({
-          left: 0
-        });
-        currentIndex = newIndex;
+      $group.css({
+        left: 0
       });
-    }
+      currentIndex = newIndex;
+    });
+  }
 
-    function advance() {
-      clearTimeout(timeout);
-      timeout = setTimeout(function() {
-        if (currentIndex < ($slides.length - 1)) {
-          move(currentIndex + 1);
-        } else {
-          move(0);
-        }
-      }, 4000);
-    }
-
-    $('.next_btn').on('click', function() {
+  function advance() {
+    clearTimeout(timeout);
+    timeout = setTimeout(function() {
       if (currentIndex < ($slides.length - 1)) {
         move(currentIndex + 1);
       } else {
         move(0);
       }
-    });
+    }, 4000);
+  }
 
-    $('.previous_btn').on('click', function() {
-      if (currentIndex !== 0) {
-        move(currentIndex - 1);
-      } else {
-        move(3);
-      }
-    });
-
-    $.each($slides, function(index) {
-      var $button = $('<a class="slide_btn">&bull;</a>');
-
-      if (index === currentIndex) {
-        $button.addClass('active');
-      }
-      $button.on('click', function() {
-        move(index);
-      }).appendTo('.slide_buttons');
-      bulletArray.push($button);
-    });
-
-    advance();
+  $('.next_btn').on('click', function() {
+    if (currentIndex < ($slides.length - 1)) {
+      move(currentIndex + 1);
+    } else {
+      move(0);
+    }
   });
+
+  $('.previous_btn').on('click', function() {
+    if (currentIndex !== 0) {
+      move(currentIndex - 1);
+    } else {
+      move(3);
+    }
+  });
+
+  $.each($slides, function(index) {
+    var $button = $('<a class="slide_btn">&bull;</a>');
+
+    if (index === currentIndex) {
+      $button.addClass('active');
+    }
+    $button.on('click', function() {
+      move(index);
+    }).appendTo('.slide_buttons');
+    bulletArray.push($button);
+  });
+
+  advance();
+});
